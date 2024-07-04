@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+
+@layer components {
+  
+  .menuLink li>a {
+    @apply cursor-pointer;
+  }
+
+  .logo a {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #81f5e3, #ff00c4, #ff0000);
+    background-size: 200%;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+  }
+.text-box h3{
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(../public/Images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+
+}
+
+
+}
+
+
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
